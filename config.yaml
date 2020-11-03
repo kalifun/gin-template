@@ -1,0 +1,19 @@
+mysql:
+  username:
+  password: ''
+  path: ''
+  port:
+  db-name: ''
+  config: 'charset=utf8&parseTime=True&loc=Local'
+  max-idle-conns: 10
+  max-open-conns: 10
+
+system:
+  Port: ':8100'
+
+  # logger configuration
+log:
+  prefix: '[gin-template]'
+  log-file: true
+  stdout: 'DEBUG'
+  file: 'DEBUG'
