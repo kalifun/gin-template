@@ -3,7 +3,7 @@ package config
 type ConfigInfo struct {
 	Mysql  Mysql  `json:"mysql" yaml:"mysql"`
 	System System `json:"system" yaml:"system"`
-	Log    Log    `json:"log" yaml:"log"`
+	Log    Log    `json:"logs" yaml:"logs"`
 }
 
 type Mysql struct {
@@ -18,12 +18,14 @@ type Mysql struct {
 }
 
 type System struct {
-	Port string `json:"port" yaml:"port"`
+	Port uint64 `json:"port" yaml:"port"`
+	Mode string `json:"mode" yaml:"mode"`
 }
 
 type Log struct {
 	Prefix  string `json:"prefix" yaml:"prefix"`
-	LogFile bool   `json:"log_file" yaml:"log-file"`
+	LogFile bool   `json:"log_file" yaml:"logs-file"`
+	Path    string `json:"path" yaml:"path"`
 	Stdout  string `json:"stdout" yaml:"stdout"`
 	File    string `json:"file" yaml:"file"`
 }

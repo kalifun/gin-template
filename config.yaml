@@ -9,11 +9,13 @@ mysql:
   max-open-conns: 10
 
 system:
-  Port: ':8100'
+  Port: 8100
+  Mode: 'debug'
 
   # logger configuration
 log:
   prefix: '[gin-template]'
   log-file: true
   stdout: 'DEBUG'
+  path: 'logs'
   file: 'DEBUG'
